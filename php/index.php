@@ -19,6 +19,10 @@ spl_autoload_register('autoloader');
 
 $app = AppFactory::create();
 
-$app->get('/alunni', "AlunniController:index");
+$app->get('/alunni', "AlunniController:getAlunni");
+$app->get('/alunni/{id}', "AlunniController:getAlunno");
+$app->post('/alunni', "AlunniController:postAlunno");
+$app->put('/alunni', "AlunniController:putAlunno");
+$app->delete('/alunni/{id}', "AlunniController:deleteAlunno");
 
 $app->run();

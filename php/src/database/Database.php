@@ -10,7 +10,7 @@ class Database extends MySqli
     protected $psw;
     protected $dbName;
 
-    public function __construct($host, $user, $psw, $dbName, $port)
+    private function __construct($host, $user, $psw, $dbName, $port)
     {
         parent::__construct($host, $user, $psw, $dbName, $port);
     }
