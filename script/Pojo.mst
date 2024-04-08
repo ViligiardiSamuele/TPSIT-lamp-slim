@@ -1,0 +1,35 @@
+/***
+* Author: Samule Viligiardi
+* Table: {{table}}
+* Date: {{datetime}}
+*
+*
+*/
+
+
+class {{table}} extends DBObject
+{
+    //protected attibutes
+    {{#attributes}}
+    protected ${{.}}
+    {{/attributes}}
+
+    function __construct(){
+        parent::__construct({{table}});
+    }
+
+    //get methods
+    {{#attributes}}
+    public function get{{.}}(){
+        return $this->{{.}}
+    }
+    {{/attributes}}
+
+    //set methods
+    {{#attributes}}
+    public function set{{.}}{($value)
+        $this->{{.}}=$value;
+    }
+    {{/attributes}}
+
+}
