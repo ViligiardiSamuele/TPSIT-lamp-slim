@@ -1,3 +1,5 @@
+<?php
+
 /***
 * Author: Samule Viligiardi
 * Table: {{table}}
@@ -7,29 +9,31 @@
 */
 
 
-class {{table}} extends DBObject
+class {{classname}} extends DBObject
 {
     //protected attibutes
     {{#attributes}}
-    protected ${{.}}
+    protected ${{.}};
     {{/attributes}}
 
     function __construct(){
-        parent::__construct({{table}});
+        parent::__construct('{{table}}');
     }
 
     //get methods
     {{#attributes}}
     public function get{{.}}(){
-        return $this->{{.}}
+        return $this->{{.}};
     }
+
     {{/attributes}}
 
     //set methods
     {{#attributes}}
-    public function set{{.}}{($value)
+    public function set{{.}}($value){
         $this->{{.}}=$value;
     }
+
     {{/attributes}}
 
 }
